@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ASKTRUNGLOL</title>
+	</head>
+	<body background="https://s-media-cache-ak0.pinimg.com/originals/61/89/e7/6189e7aeb11c3483ea1d81202e1b89b8.gif">
+		<center>
+			<img src="imgs/ask_trung_logo2.png"/>
+			<form>
+				<input type="text" name="question" style="width:500px;height:50px;font-size:18pt;">
+			</form>
+                	<button onclick="randImg()">ASK TRUNG</button>
+			<br />
+		
+			<img id="trungsmightyadvice" src="" />
+		</center>
+		<script>
+    			function randImg() {
+				var myImg = new Array ();
+				for (i = 1; i <= 29; i++) {
+					myImg[i] = "imgs/" + i + ".png";
+				}
+				var rnd = Math.floor( Math.random() * myImg.length );
+				if( rnd == 0 ) 
+					rnd = 1;
+				document.getElementById("trungsmightyadvice").src = myImg[rnd];
+    			}
+		</script>
+		
+	</body>
+</html>
+
+
